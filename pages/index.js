@@ -1,5 +1,6 @@
-function casinha() {
-  return <h1>do lado do morro</h1>;
+function newExpense() {
+  return <h1>New Expense</h1>;
 }
+console.log("teste");
 
-export default casinha;
+export default newExpense;
