@@ -1,44 +1,15 @@
-// pages/form.js
-import { useState } from "react";
+// pages/index.js
+import React from "react";
+import FormPage from "./form";
 
-export default function FormPage() {
-  const [inputValue, setInputValue] = useState("");
-  const [expenseDescription, setExpenseDescription] = useState("");
-
-  const handleSubmit = (e) => {
-    e.preventDefault();
-    alert(`: You spent ${inputValue}, in: ${expenseDescription}`);
-  };
-
+const HomePage = () => {
   return (
-    <div style={{ padding: "20px" }}>
-      <h1>Expense Tracker</h1>
-      <h2>New Expense</h2>
-      <form onSubmit={handleSubmit}>
-        <label>
-          Title:
-          <input
-            type="text"
-            value={expenseDescription}
-            onChange={(e) => setExpenseDescription(e.target.value)}
-            style={{ marginLeft: "10px" }}
-          />
-        </label>
-        <br />
-        <label>
-          Amount:
-          <input
-            type="text"
-            value={inputValue}
-            onChange={(e) => setInputValue(e.target.value)}
-            style={{ marginLeft: "10px" }}
-          />
-        </label>
-        <br />
-        <button type="submit" style={{ marginLeft: "10px" }}>
-          Submit
-        </button>
-      </form>
+    <div>
+      <h1>Welcome to the Expense Tracker</h1>
+      <p>This is the home page of the Expense Tracker app.</p>
+      <FormPage />
     </div>
   );
-}
+};
+
+export default HomePage;
